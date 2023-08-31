@@ -26,3 +26,5 @@ https://tezumie.github.io/into-the-mines/
 - **Enter / Mouse Left**: Throw Pickaxe
 - **Shift**: Hold to Climb
 - **P**: Pause / Menu
+
+![Capture](https://github.com/Tezumie/into-the-mines/assets/102488626/51199bea-ded3-4465-9dce-16312c89d6ba)
