@@ -1,6 +1,10 @@
 # into-the-mines
 a short platforming game made with p5play.
 
+find your way to the Rest stop! will include a timer and collectables in the future;
+
+play here:
+https://tezumie.github.io/into-the-mines/
 
 ## Controls Information
 
