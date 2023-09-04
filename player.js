@@ -371,7 +371,7 @@ function movePlayer() {
     if (
         kb.pressing("left") ||
         contro.pressing("left") ||
-        contro.leftStick.x < -0.15
+        contro.leftStick.x < -0.25
     ) {
         player.inputLeft = true;
     } else {
@@ -380,7 +380,7 @@ function movePlayer() {
     if (
         kb.pressing("right") ||
         contro.pressing("right") ||
-        contro.leftStick.x > 0.15
+        contro.leftStick.x > 0.25
     ) {
         player.inputRight = true;
     } else {
@@ -596,7 +596,7 @@ function movePlayer() {
                 if (
                     kb.pressing("down") ||
                     contro.pressing("down") ||
-                    contro.leftStick.y > 0
+                    contro.leftStick.y > 0.25
                 ) {
                     player.vel.y = -player.jumpForce / 7;
                 } else {
@@ -619,7 +619,7 @@ function movePlayer() {
                 if (
                     kb.pressing("up") ||
                     contro.pressing("up") ||
-                    contro.leftStick.y < -0.15
+                    contro.leftStick.y < -0.25
                 ) {
                     if (!player.headSensor.overlapping(ground)) {
                         player.setAni = "climb";
@@ -628,7 +628,7 @@ function movePlayer() {
                 } else if (
                     kb.pressing("down") ||
                     contro.pressing("down") ||
-                    contro.leftStick.y > 0.15
+                    contro.leftStick.y > 0.25
                 ) {
                     if (!player.groundSensor.overlapping(ground)) {
                         player.vel.y += 0.8;

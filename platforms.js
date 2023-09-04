@@ -47,17 +47,17 @@ function movePlatforms() {
       }
     }
     if (
-      player.y + 8.5 > p.y ||
-      kb.pressing("down") ||
-      contro.pressing("down") ||
-      (player.currentState == player.states.CLIMB && contro.leftStick.y > 0)
-    ) {
-      p.collider = "none";
-      p.leftSensor.collider = "d";
-      p.rightSensor.collider = "d";
-    } else {
-      p.collider = "static";
-    }
+			player.y + 8.5 > p.y ||
+			kb.pressing('down') ||
+			contro.pressing('down') ||
+      (player.currentState == player.states.CLIMB || contro.leftStick.y > 0.25)
+		) {
+			p.collider = 'none';
+			p.leftSensor.collider = 'd';
+			p.rightSensor.collider = 'd';
+		} else {
+			p.collider = 'static';
+		}
   }
 }
 function generateMovingPlatforms() {
@@ -145,10 +145,11 @@ function handlePlatforms() {
   }
   for (let o of oneWayPlatform) {
     if (
-      player.y + 10.5 > o.y ||
+      player.currentState == player.states.CLIMB ||
       kb.pressing("down") ||
       contro.pressing("down") ||
-      (player.currentState == player.states.CLIMB && contro.leftStick.y > 0)
+      contro.leftStick.y > 0.25 ||
+      player.y + 10.5 > o.y
     ) {
       o.collider = "none";
     } else {
