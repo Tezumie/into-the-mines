@@ -364,7 +364,6 @@ function movePlayer() {
     ////////// detect input //////////
     if (kb.presses("up") || kb.presses("space") || contro.presses("a")) {
         player.inputJump = true;
-        player.jumpedDuringClimb = false;
         if (player.isInWater) {
             splashSound.play(0, random(0.7, 1.5), 0.2, 0, 1);
         }
@@ -493,6 +492,9 @@ function movePlayer() {
                 player.mirror.x = true;
             }
         }
+    }
+    if (player.currentState != player.states.CLIMB) {
+        player.jumpedDuringClimb = false;
     }
     ////////// playerStateMachine //////////
     switch (player.currentState) {
