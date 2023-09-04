@@ -1,10 +1,13 @@
 # into-the-mines
-a short platforming game made with p5play.
 
-find your way to the Rest stop! will include a timer and collectables in the future;
+[![into-the-mines](into-the-mines.png)](https://tezumie.github.io/into-the-mines/)
 
 play here:
 https://tezumie.github.io/into-the-mines/
+
+a short platforming game made with p5play.
+
+find your way to the Rest stop! will include a timer and collectables in the future;
 
 ## Controls Information
 
@@ -26,5 +29,3 @@ https://tezumie.github.io/into-the-mines/
 - **Enter / Mouse Left**: Throw Pickaxe
 - **Shift**: Hold to Climb
 - **P**: Pause / Menu
-
-![Capture](https://github.com/Tezumie/into-the-mines/assets/102488626/51199bea-ded3-4465-9dce-16312c89d6ba)

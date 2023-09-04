@@ -594,7 +594,7 @@ function movePlayer() {
                 //player.setAni = "idle";
                 player.canJump = false;
                 if (
-                    kb.pressing("s") ||
+                    kb.pressing("down") ||
                     contro.pressing("down") ||
                     contro.leftStick.y > 0
                 ) {
@@ -617,7 +617,7 @@ function movePlayer() {
                     contro.leftStick.x <= 0.5)
             ) {
                 if (
-                    kb.pressing("w") ||
+                    kb.pressing("up") ||
                     contro.pressing("up") ||
                     contro.leftStick.y < -0.15
                 ) {
@@ -626,7 +626,7 @@ function movePlayer() {
                         player.vel.y -= 0.7;
                     }
                 } else if (
-                    kb.pressing("s") ||
+                    kb.pressing("down") ||
                     contro.pressing("down") ||
                     contro.leftStick.y > 0.15
                 ) {
