@@ -392,7 +392,7 @@ function movePlayer() {
             player.leftClimbSensor.overlapping(ground)) &&
         player.climbToggle == false
     ) {
-        if (kb.pressing("shift") || contro.pressing("r")) {
+        if (kb.pressing("shift") || contro.pressing("r") || contro.pressing("rt")) {
             player.currentState = player.states.CLIMB;
             player.walkAcceleration = 0.07;
             if (
@@ -483,7 +483,7 @@ function movePlayer() {
             player.currentState == player.states.FALLDOWN &&
             !player.isOnGround &&
             player.cornerSensor.overlapping(ground) &&
-            (kb.pressing("shift") || contro.pressing("r"))
+            (kb.pressing("shift") || contro.pressing("r") || contro.pressing("rt"))
         ) {
             player.vel.x = 0;
             if (player.mirror.x == true) {
@@ -586,6 +586,7 @@ function movePlayer() {
             if (
                 kb.released("shift") ||
                 contro.released("r") ||
+                contro.released("rt") ||
                 (!player.rightClimbSensor.overlapping(ground) &&
                     !player.leftClimbSensor.overlapping(ground))
             ) {
