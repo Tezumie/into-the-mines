@@ -364,6 +364,7 @@ function movePlayer() {
     ////////// detect input //////////
     if (kb.presses("up") || kb.presses("space") || contro.presses("a")) {
         player.inputJump = true;
+        player.jumpedDuringClimb = false;
         if (player.isInWater) {
             splashSound.play(0, random(0.7, 1.5), 0.2, 0, 1);
         }
@@ -570,7 +571,13 @@ function movePlayer() {
             player.vel.y = 0;
             player.vel.x = 0;
             world.gravity.y = 0;
-            if (kb.pressing("space") || contro.pressing("a")) {
+            if (kb.presses("space") || contro.presses("a")) {
+                player.jumpedDuringClimb = true;
+            }
+            if (
+                player.jumpedDuringClimb &&
+                (kb.pressing("space") || contro.pressing("a"))
+            ) {
                 if (player.mirror.x == false) {
                     player.vel.x = -1.5;
                 } else {
