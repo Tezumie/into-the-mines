@@ -272,6 +272,10 @@ function draw() {
             unPause();
         }
     }
+    if (kb.presses("backspace") || contro.pressed("select")) {
+        let fs = fullscreen();
+		fullscreen(!fs);
+    }
     if (gameState === "running") {
         colIndex = floor(player.x / pixelsWidth);
         rowIndex = floor(player.y / pixelsHeight);

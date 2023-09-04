@@ -56,17 +56,19 @@ function createPauseMenu() {
     let controlsInfo = createDiv(`Controller Controls:<br>
 A Button: Jump / Action<br>
 B Button: Throw Pickaxe<br>
-Right Bumper (RB): Hold to Climb<br>
-D-pad Down: Dropdown<br>
-Left Stick: Move character<br>
+Right Bumper (RB) / RT: Hold to Climb<br>
+Left Stick / D-pad: Move character<br>
+Select Button: Fullscreen<br>
 Start Button: Pause / Menu<br><br>
 Keyboard Controls:<br>
-A: Move Left<br>
-S: Dropdown<br>
-D: Move Right<br>
-Spacebar / W: Jump / Action<br>
+Spacebar: Jump / Action<br>
 Enter / Mouse Left: Throw Pickaxe<br>
+W / ArrowUp: Aim up<br>
+A / ArrowLeft: Move Left<br>
+S / ArrowDown: Dropdown<br>
+D / ArrowRight: Move Right<br>
 Shift: Hold to Climb<br>
+Backspace: Fullscreen<br>
 P: Pause / Menu`);
     controlsInfo.style("font-family", "Arial, sans-serif");
     controlsInfo.style("color", color(255));

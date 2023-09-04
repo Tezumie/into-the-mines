@@ -122,7 +122,7 @@ function handleGrapple() {
             } else {
                 target = createVector(player.x - 100, player.y);
             }
-            if (kb.pressing("up") || contro.pressing("up")) {
+            if (kb.pressing("up") || contro.pressing("up") || contro.leftStick.y < -0.25) {
                 target = createVector(player.x, player.y - 100);
                 grappleTarget.movingUp = true;
                 grappleTarget.x = player.x;
@@ -362,7 +362,7 @@ function createPlayer(x, y) {
 
 function movePlayer() {
     ////////// detect input //////////
-    if (kb.presses("up") || kb.presses("space") || contro.presses("a")) {
+    if (kb.presses("space") || contro.presses("a")) {
         player.inputJump = true;
         if (player.isInWater) {
             splashSound.play(0, random(0.7, 1.5), 0.2, 0, 1);
