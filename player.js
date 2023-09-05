@@ -125,7 +125,7 @@ function handleGrapple() {
             // if aiming up with the control stick and not moving left or right 
             if (
                 kb.pressing("up") || contro.pressing("up") ||
-                (contro.leftStick.y < -0.9 && contro.leftStick.x < 0.25 && contro.leftStick.x > -0.25)) {
+                (contro.leftStick.y < -0.25 && contro.leftStick.x < 0.25 && contro.leftStick.x > -0.25)) {
                 target = createVector(player.x, player.y - 100);
                 grappleTarget.movingUp = true;
                 grappleTarget.x = player.x;

@@ -275,7 +275,10 @@ function draw() {
     if (kb.presses("backspace") || contro.pressed("select")) {
         let fs = fullscreen();
 		fullscreen(!fs);
+        mouse.visible = false;
     }
+    if (mouse.presses()) mouse.visible = true;
+    
     if (gameState === "running") {
         colIndex = floor(player.x / pixelsWidth);
         rowIndex = floor(player.y / pixelsHeight);
