@@ -120,15 +120,15 @@ function setup() {
 	myScene.layer = 0;
 	myScene.w = pixelsWidth;
 	myScene.h = pixelsHeight;
-	myScene.tile = "Q";
+	myScene.tile = 'Q';
 	myScene.spriteSheet = sceneImg;
 	myScene.addImg({
-	    w: pixelsWidth,
-	    h: pixelsHeight,
-	    row: 0,
-	    col: 0
+		w: pixelsWidth,
+		h: pixelsHeight,
+		row: 0,
+		col: 0
 	});
-	myScene.collider = "none";
+	myScene.collider = 'none';
 	///////
 	movingPlatforms = new Group();
 	movingPlatforms.layer = 1;
@@ -278,7 +278,7 @@ function setup() {
 }
 
 function draw() {
-	renderStats();
+	// renderStats();
 
 	if (kb.pressed('p') || contro.pressed('start')) {
 		if (gameState === 'running') {
