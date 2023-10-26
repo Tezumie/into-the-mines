@@ -14,10 +14,10 @@ function canvasSetup() {
 }
 function CameraController() {
   //////// parallaxCAMERA ////////
-  let camerYoff = 12.0;
+  let cameraYoff = 12.0;
   let lagFactor = 0.05;
   let dx = player.x - camera.x;
-  let dy = player.y - camerYoff - camera.y;
+  let dy = player.y - cameraYoff - camera.y;
   camera.x += dx * lagFactor;
   camera.y += dy * lagFactor/2;
   camera.zoom = scaleFactor * (pixelsWidth / 256);
