@@ -58,7 +58,7 @@ function playerParticle(spawnX, spawnY, angle, dir) {
   if (playerParticle.frameCounter % frameCountThreshold === 0) {
     let playerTrail = new Sprite(spawnX, spawnY, 16, 16);
     playerTrail.spriteSheet = newPlayerTrailSprite;
-    playerTrail.addImg({ w: 16, h: 16, row: 0, col: 17 });
+    playerTrail.addAni({ w: 16, h: 16, row: 0, col: 17 });
     playerTrail.img.color = color(0);
     playerTrail.mirror.x = dir;
     playerTrail.collider = "none";
@@ -73,7 +73,7 @@ function playerParticle(spawnX, spawnY, angle, dir) {
 function pickAxeParticle(spawnX, spawnY, angle, dir) {
   let pickAxeTrail = new Sprite(spawnX, spawnY, 8, 8);
   pickAxeTrail.spriteSheet = pickAxeTrailSpriteSheet;
-  pickAxeTrail.addImg({ w: 8, h: 8, row: 13, col: 4 });
+  pickAxeTrail.addAni({ w: 8, h: 8, row: 13, col: 4 });
   pickAxeTrail.layer = 0;
   pickAxeTrail.rotation = angle;
   pickAxeTrail.mirror.x = dir;
