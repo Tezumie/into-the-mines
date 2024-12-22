@@ -91,7 +91,7 @@ function setup() {
 	water.h = 6;
 	water.tile = 'w';
 	water.spriteSheet = tileSet;
-	water.addImg({
+	water.addAni({
 		w: 8,
 		h: 8,
 		row: 1,
@@ -106,7 +106,7 @@ function setup() {
 	crate.h = 7;
 	crate.tile = 'c';
 	crate.spriteSheet = tileSet;
-	crate.addImg({
+	crate.addAni({
 		w: 8,
 		h: 8,
 		row: 11,
@@ -122,7 +122,7 @@ function setup() {
 	myScene.h = pixelsHeight;
 	myScene.tile = 'Q';
 	myScene.spriteSheet = sceneImg;
-	myScene.addImg({
+	myScene.addAni({
 		w: pixelsWidth,
 		h: pixelsHeight,
 		row: 0,
@@ -136,7 +136,7 @@ function setup() {
 	movingPlatforms.h = 4;
 	movingPlatforms.tile = 'm';
 	movingPlatforms.spriteSheet = platformImg;
-	movingPlatforms.addImg({
+	movingPlatforms.addAni({
 		w: 32,
 		h: 4,
 		row: 0,
@@ -150,7 +150,7 @@ function setup() {
 	breakingGround.h = 8;
 	breakingGround.tile = 'b';
 	breakingGround.spriteSheet = tileSet;
-	breakingGround.addImg({
+	breakingGround.addAni({
 		w: 8,
 		h: 8,
 		row: 1,
@@ -174,7 +174,7 @@ function setup() {
 	ground.h = 8;
 	ground.tile = 'g';
 	ground.spriteSheet = tileSet;
-	ground.addImg({
+	ground.addAni({
 		w: 8,
 		h: 8,
 		row: 13,
@@ -201,7 +201,7 @@ function setup() {
 	oneWayPlatforms.h = 8;
 	oneWayPlatforms.tile = 'o';
 	oneWayPlatforms.spriteSheet = tileSet;
-	oneWayPlatforms.addImg({
+	oneWayPlatforms.addAni({
 		w: 8,
 		h: 8,
 		row: 1,
