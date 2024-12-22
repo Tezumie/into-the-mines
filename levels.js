@@ -49,7 +49,7 @@ function GenerateLevel() {
     let x = colIndex * pixelsWidth + 4;
     let y = rowIndex * pixelsHeight + 4;
     myTileSet = new Tiles(currentLevel.data, x, y, 8, 8);
-    myScene.addImg({
+    myScene.addAni({
         w: pixelsWidth,
         h: pixelsHeight,
         row: rowIndex,
