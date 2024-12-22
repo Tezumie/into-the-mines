@@ -111,7 +111,7 @@ function handleGrapple() {
 			swishSound.play(0, random(0.9, 1.05), 0.025, 0, 1);
 			grappleTarget.returning = false;
 			grappleTarget.spriteSheet = tileSet;
-			grappleTarget.addImg({
+			grappleTarget.addAni({
 				w: 8,
 				h: 8,
 				row: 13,
