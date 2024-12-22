@@ -59,7 +59,7 @@ function Grapple() {
 		grapple = new Sprite(x, y, 12);
 		grapple.startY = y;
 		grapple.spriteSheet = tileSet;
-		grapple.addImg({
+		grapple.addAni({
 			w: 8,
 			h: 8,
 			row: 13,
